@@ -10,6 +10,7 @@ int lifo_push(struct lifo_s *lifo,void *data){
 	if (lifo_node == NULL) return 0;
 	lifo_node->data = data;
 	if (lifo->head == NULL){
+		lifo_node->p = NULL;
 		lifo->head = lifo_node;
 	}
 	else{
